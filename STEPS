@@ -1,0 +1,2 @@
+1. docker run -it -v c:/Users/drubio/projects/rails:/myapp rails:latest /bin/bash
+2. create docker-compose.yml

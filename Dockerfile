@@ -5,10 +5,10 @@ RUN apk upgrade
 
 RUN apk add --no-cache \
     bash git vim openssh openssl yarn sudo su-exec shadow tzdata \
-    postgresql-client postgresql-dev sqlite\
+    postgresql-client postgresql-dev sqlite sqlite-dev sqlite-libs\
     build-base libxml2-dev libxslt-dev
 
-RUN gem install rails
+# RUN gem install rails it's better to install it with docker-container
 
 ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
