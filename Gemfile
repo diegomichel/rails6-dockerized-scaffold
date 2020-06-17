@@ -43,6 +43,7 @@ group :development do
   gem "rack-livereload"
   gem "guard-livereload", '~> 2.5'
   gem "guard"
+  gem "guard-minitest"
   gem "better_errors"
   gem "binding_of_caller"
 end
