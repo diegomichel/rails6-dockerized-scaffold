@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
 * System dependencies
+- Docker
 
 * Configuration
+docker-compose run web bundle install
 
-* Database creation
+* To run the project
+docker-compose build
+docker-compose up
 
-* Database initialization
+* To run rails commands, example rails c: 
+docker-compose run web bundle exec rails c
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* I want to use another db engine
+docker-compose.yml includes configuration for postgresql, just uncomment it.
+make sure to change the config on the config/database.yml file too.
