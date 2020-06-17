@@ -8,6 +8,8 @@ RUN apk add --no-cache \
     postgresql-client postgresql-dev sqlite sqlite-dev sqlite-libs\
     build-base libxml2-dev libxslt-dev
 
+RUN gem install foreman
+
 # GOSU along with the entrypoint is required to fix the /etc/hosts issue when running rails server.
 ARG GOSU_VERSION=1.7
 ENV GOSU_VERSION $GOSU_VERSION
