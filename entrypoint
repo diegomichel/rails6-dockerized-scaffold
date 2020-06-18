@@ -5,4 +5,6 @@ sed -i 's/::1\tlocalhost ip6-localhost ip6-loopback/::1 ip6-localhost ip6-loopba
 cat /etc/hosts.new > /etc/hosts
 rm /etc/hosts.new
 
+rm -f /myapp/tmp/pids/server.pid
+
 exec gosu root "$@"

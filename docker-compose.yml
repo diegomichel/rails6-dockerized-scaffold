@@ -18,8 +18,11 @@ services:
     volumes:
       - .:/myapp
       - bundle_path:/bundle
+      - cache:/cache
     environment:
-      - BUNDLE_PATH=/bundle/vendor #New
+      - BUNDLE_PATH=/bundle/vendor
+      - SPROCKETS_CACHE=/cache
 volumes:
   bundle_path: 
+  cache:
 #  postgres-data:
